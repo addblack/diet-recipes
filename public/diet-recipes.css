@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --radius: 4px;
+    --diet-gray: #323232;
+    --diet-white: #ffffff;
+    --diet-primary: #06B05B;
+}
+
+.recipes {
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    font-family: inherit;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.search__title {
+    text-transform: uppercase;
+    line-height: 1rem;
+}
+
+.search__form {
+    display: block;
+    margin: 1.2rem auto;
+}
+
+.search__form input {
+    outline: none;
+    border:none;
+    background: var(--diet-white);
+    padding: 10px;
+    min-width: 320px;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius);
+    background-color: var(--diet-white);
+    box-shadow: 0 14px 33px -10px rgba(34, 60, 80, 0.11);
+    font-family: 'Poppins', sans-serif;
+    flex: 100%;
+    transition: .2s;
+    min-width: 320px;
+    max-width: 350px;
+}
+
+.recipe__image {
+    height: 240px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('http://diet.test/wp-content/uploads/2022/02/jen-gunter-A4BBdJQu2co-unsplash-scaled.jpg');
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+
+.recipe__info {
+    padding: 0 1rem;
+}
+
+.recipe__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--diet-primary);
+    padding: 0.5rem 0;
+    color: var(--diet-gray);
+}
+
+.recipe__desc {
+    height: 150px;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding: 0.7rem 0;
+    overflow: hidden;
+    color: var(--diet-gray);
+}
+
+.recipe__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-weight: 600;
+}
+
+.recipe__footer > div {
+    display: flex;
+    align-items: center;
+}
+
+.recipe__footer-cooktime span {
+    color: var(--diet-gray);
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.recipe__footer-rating img {
+    cursor: pointer;
+}
+
+.recipe__footer-rating img:hover {
+    transform: scale(1.1);
+}
+
+.recipe__footer img {
+    margin-right: 5px;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--diet-white);
+    border-top: 6px solid var(--diet-primary);
+    border-radius: 100%;
+    animation: spin 1s infinite linear;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader.hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .recipe {
+        flex: 0 0 49%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .recipe {
+        flex: 0 0 31%;
+    }
+}
