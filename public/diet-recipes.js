@@ -80,17 +80,13 @@ if (recipesBlock) {
       title = 'Cool Recipe';
     }
 
-    if (!image_url) {
-      image_url = '/wp-content/plugins/diet-recipes/public/default.jpg';
-    }
-
     const {diet_recipe_cooktime, diet_recipe_rating, diet_recipe_short_description} = meta;
     const trimDescription = diet_recipe_short_description.substring(0, 163);
 
     const starsImages = dietStars(Number(diet_recipe_rating));
 
     return (
-      `<div class="recipe">
+      `<div class="recipe anime anime__totop">
         <div class="recipe__image" style="background-image: url(${image_url})"></div>
             <div class="recipe__info">
                 <p class="recipe__title">${title}</p>
@@ -112,6 +108,6 @@ if (recipesBlock) {
       </div>`
     )
   }
-
 }
+
 

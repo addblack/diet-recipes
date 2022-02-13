@@ -35,7 +35,7 @@ function get_diet_recipes()
 			'id' => $id,
 			'title' => $recipe->post_title,
 			'meta' => get_post_meta_single($id),
-			'image_url' => get_the_post_thumbnail_url($id),
+			'image_url' => get_the_post_thumbnail_url($id) ?: plugin_dir_url(dirname(__FILE__)) . 'public/default.jpg',
 		];
 	}
 
