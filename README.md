@@ -21,3 +21,6 @@ Yes, and you can use with classic editor or with Gutenberg.
 #### Can i see it in action?
 
 Yes, you can check it here - favorite.travel/recipes-2/ (Animations and ui improvements coming soon)
+
+#### Can i see code for this app made with react?
+Yes, you can check it here - https://github.com/addblack/recipe-app
