@@ -18,6 +18,21 @@ function diet_recipes_assets()
 add_action('wp_enqueue_scripts', 'diet_recipes_assets');
 
 
+function connect_font()
+{
+	?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<?php
+}
+
+add_action('wp_head', 'connect_font');
+
+/**
+ * Generate Html for search and show recipes.
+ * @return false|string
+ */
 function diet_recipes_shortcode()
 {
 	ob_start(); ?>
