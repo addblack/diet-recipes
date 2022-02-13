@@ -33,7 +33,7 @@ function get_diet_recipes()
 		$id = $recipe->ID;
 		$response[] = [
 			'id' => $id,
-			'title' => $recipe->post_title,
+			'title' => strtolower($recipe->post_title) ?: 'Tasty Recipe',
 			'meta' => get_post_meta_single($id),
 			'image_url' => get_the_post_thumbnail_url($id) ?: plugin_dir_url(dirname(__FILE__)) . 'public/default.jpg',
 		];

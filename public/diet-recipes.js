@@ -75,11 +75,6 @@ if (recipesBlock) {
    * @returns {string} - Html markup with data from api
    */
   function dietCreateRecipeHtml({title, meta, image_url}) {
-
-    if (!title) {
-      title = 'Cool Recipe';
-    }
-
     const {diet_recipe_cooktime, diet_recipe_rating, diet_recipe_short_description} = meta;
     const trimDescription = diet_recipe_short_description.substring(0, 163);
 
